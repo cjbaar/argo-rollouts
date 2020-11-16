@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: rollouts-demo
-        image: ccp-docker.artifactory.se-charter.net/external/argo/demo/rollouts-demo:red
+        image: ccp-docker.artifactory.se-charter.net/external/argo/demo/rollouts-demo:yellow
         imagePullPolicy: Always
         ports:
         - name: http
