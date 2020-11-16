@@ -11,6 +11,9 @@ spec:
   - rollouts-demo
   http:
   - name: primary
+    match:
+    - uri:
+        prefix: "/rollouts-demo"
     route:
     - destination:
         host: rollouts-demo
