@@ -5,13 +5,14 @@ metadata:
 spec:
   gateways:
   - rollouts-demo-gateway
+  - mesh
   hosts:
-  - rollouts-demo.local
+  - rollouts-demo
   http:
   - name: primary
     route:
     - destination:
-        host: rollouts-demo-stable
+        host: rollouts-demo
       weight: 100
     - destination:
         host: rollouts-demo-canary
