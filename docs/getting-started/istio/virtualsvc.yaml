@@ -4,9 +4,10 @@ metadata:
   name: rollouts-demo-vsvc
 spec:
   gateways:
-  - rollouts-demo-gateway
   - mesh
+  - rollouts-demo-gateway
   hosts:
+  - '*.dev-spectrum.net'
   - rollouts-demo
   http:
   - name: primary
