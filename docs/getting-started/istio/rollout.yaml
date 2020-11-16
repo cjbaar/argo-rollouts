@@ -6,7 +6,7 @@ spec:
   replicas: 5
   strategy:
     canary:
-      stableService: rollouts-demo
+      stableService: rollouts-demo-stable
       canaryService: rollouts-demo-canary
       trafficRouting:
         istio:
