@@ -15,9 +15,10 @@ spec:
             routes:
             - primary # At least one route is required
       steps:
-      - setWeight: 25
       - pause: {}
-      - setWeight: 75
+      - setWeight: 20
+      - pause: {}
+      - setWeight: 50
       - pause: {}
   revisionHistoryLimit: 2
   selector:
@@ -31,7 +32,7 @@ spec:
     spec:
       containers:
       - name: rollouts-demo
-        image: ccp-docker.artifactory.se-charter.net/external/argo/demo/rollouts-demo:green
+        image: ccp-docker.artifactory.se-charter.net/external/argo/demo/rollouts-demo:blue
         imagePullPolicy: Always
         ports:
         - name: http
