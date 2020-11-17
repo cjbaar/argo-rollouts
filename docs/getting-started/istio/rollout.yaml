@@ -11,7 +11,7 @@ spec:
       trafficRouting:
         istio:
           virtualService:
-            name: rollouts-demo-vs-test
+            name: rollouts-demo-vsvc
             routes:
             - primary # At least one route is required
       steps:
