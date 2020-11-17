@@ -15,18 +15,18 @@ spec:
             routes:
             - primary # At least one route is required
       steps:
-      - experiment:
-          duration: 5m
-          templates:
-          - name: baseline
-            specRef: stable
-          - name: canary
-            specRef: canary
-    - pause: {}
-      - setWeight: 20
-      - pause: {}
-      - setWeight: 50
-      - pause: {}
+        - experiment:
+            duration: 5m
+            templates:
+            - name: baseline
+              specRef: stable
+            - name: canary
+              specRef: canary
+        - pause: {}
+        - setWeight: 20
+        - pause: {}
+        - setWeight: 50
+        - pause: {}
   revisionHistoryLimit: 2
   selector:
     matchLabels:
