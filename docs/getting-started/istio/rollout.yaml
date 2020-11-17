@@ -15,13 +15,6 @@ spec:
             routes:
             - primary # At least one route is required
       steps:
-        - experiment:
-            templates:
-            - name: baseline
-              specRef: stable
-            - name: canary
-              specRef: canary
-        - pause: {}
         - setWeight: 20
         - pause: {}
         - setWeight: 50
@@ -38,7 +31,7 @@ spec:
     spec:
       containers:
       - name: rollouts-demo
-        image: ccp-docker.artifactory.se-charter.net/external/argo/demo/rollouts-demo:red
+        image: ccp-docker.artifactory.se-charter.net/external/argo/demo/rollouts-demo:blue
         imagePullPolicy: Always
         ports:
         - name: http
